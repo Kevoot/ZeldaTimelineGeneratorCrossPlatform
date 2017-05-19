@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ZeldaTimelineGeneratorCrossPlatform:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ZeldaTimelineGeneratorCrossPlatform_jar</output-path>
+    <root id="archive" name="ZeldaTimelineGeneratorCrossPlatform.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/ZeldaTimelineGeneratorCrossPlatform_jar/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="ZeldaTimelineGeneratorCrossPlatform" />
+      <element id="module-output" name="jung-algorithms" />
+      <element id="module-output" name="jung-api" />
+      <element id="module-output" name="jung-graph-impl" />
+      <element id="module-output" name="jung-visualization" />
+      <element id="module-output" name="jung-samples" />
+      <element id="module-output" name="jung-io" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/junit/junit/3.8.1/junit-3.8.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
