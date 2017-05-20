@@ -20,6 +20,8 @@ public class NewGameDialogueController {
     }
 
     public void setDialogStage(Stage dialogStage) {
+        dialogStage.setResizable(false);
+        dialogStage.sizeToScene();
         this.dialogStage = dialogStage;
         sourceGameComboBox.setItems(GameEnum.getFormattedTitleList());
     }

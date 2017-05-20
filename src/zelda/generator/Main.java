@@ -97,7 +97,9 @@ public class Main extends Application {
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
+            primaryStage.setResizable(false);
             primaryStage.setScene(scene);
+            primaryStage.sizeToScene();
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -214,6 +216,8 @@ public class Main extends Application {
     }
 
     public Stage getPrimaryStage() {
+        primaryStage.setResizable(false);
+        primaryStage.sizeToScene();
         return primaryStage;
     }
 

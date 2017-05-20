@@ -1,0 +1,164 @@
+@font-face {
+    src: url('HyliaSerifBeta-Regular.otf');
+}
+
+.background {
+    -fx-background-image: url("Background.png");
+}
+
+.label {
+    -fx-font-size: 10pt;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-text-fill: deepskyblue;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,255,255,0.6), 10, 0, 0, 0);
+    -fx-opacity: 0.6;
+}
+
+.label-bright {
+    -fx-font-size: 10pt;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,255,255,0.6), 10, 0, 0, 0);
+    -fx-text-fill: deepskyblue;
+    -fx-opacity: 0.6;
+}
+
+.label-header {
+    -fx-font-size: 10pt;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-text-fill: deepskyblue;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,255,255,0.6), 10, 0, 0, 0);
+    -fx-opacity: 0.6;
+}
+
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: transparent;
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+    -fx-controls-selected: deepskyblue;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,255,255,0.6), 10, 0, 0, 0);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,255,255,0.3), 10, 0, 0, 0);
+    -fx-border-color:
+        transparent
+        transparent
+        transparent
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-text-fill: deepskyblue;
+    -fx-alignment: center-left;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,255,255,0.3), 10, 0, 0, 0);
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: cadetblue;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent, transparent;
+    -fx-background-image: url("Divider.png");
+    -fx-padding: 0 0.9em 0 0.9em;
+}
+
+.split-pane {
+    -fx-padding: 0 0 0 0;
+    -fx-border-color: derive(#1d1d1d, 20%);
+    -fx-background-color: derive(#1d1d1d,20%);
+        -fx-border-color: transparent;
+        -fx-background-color: transparent;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d,20%);
+    -fx-border-color: derive(#1d1d1d, 20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-effect: dropshadow(three-pass-box, derive(cadetblue, -20%), 10, 0, 4, 4);
+    -fx-text-fill: deepskyblue;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: transparent;
+    -fx-border-color: derive(#1d1d1d, 20%);
+}
+
+.text-field {
+    -fx-font-size: 10pt;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,255,255,0.6), 10, 0, 0, 0);
+}
+
+/* 
+ * Metro style Push Button
+ * Author: Pedro Duque Vieira
+ * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
+ */
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: deepskyblue;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,255,255,0.6), 10, 0, 0, 0);
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: 'Open Sans', sans-serif;
+    -fx-font-size: 10pt;
+    -fx-text-fill: deepskyblue;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: deepskyblue;
+}
+
+.button:focused {
+    -fx-border-color: deepskyblue, deepskyblue;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: transparent;
+    -fx-text-fill: deepskyblue;
+}
+
+.button:default {
+    -fx-background-color: transparent;
+    -fx-text-fill: deepskyblue;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}

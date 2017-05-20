@@ -39,6 +39,8 @@ public class RootChooserController {
     }
 
     public void setDialogStage(Stage dialogStage) {
+        dialogStage.setResizable(false);
+        dialogStage.sizeToScene();
         this.dialogStage = dialogStage;
     }
 

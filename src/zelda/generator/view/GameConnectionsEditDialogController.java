@@ -43,6 +43,8 @@ public class GameConnectionsEditDialogController {
      */
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
+        dialogStage.setResizable(false);
+        dialogStage.sizeToScene();
     }
 
     public void setConnection(Connection connection) {

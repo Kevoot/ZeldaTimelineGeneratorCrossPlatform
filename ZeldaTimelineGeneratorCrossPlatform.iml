@@ -12,5 +12,6 @@
     <orderEntry type="module" module-name="jung-graph-impl" />
     <orderEntry type="module" module-name="jung-api" />
     <orderEntry type="module" module-name="jung-visualization" />
+    <orderEntry type="library" name="KotlinJavaScript" level="project" />
   </component>
 </module>

@@ -18,17 +18,22 @@ import zelda.generator.model.Game;
 import zelda.generator.model.GameEnum;
 import zelda.generator.model.ZeldaTree;
 
+import javax.script.Invocable;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -134,18 +139,25 @@ public class ZeldaGraphWindow {
     }
 
     private void createEdges(List<ZeldaTree.Node> treeNodes) {
-        for(ZeldaTree.Node game : treeNodes) {
-            for(Object parent : game.parents) {
+        for (ZeldaTree.Node game : treeNodes) {
+            for (Object parent : game.parents) {
                 graph.addEdge(Math.random(),
-                        GameEnum.getStringFromEnum(((Game)((ZeldaTree.Node)parent).data).getGameTitle()),
-                        GameEnum.getStringFromEnum(((Game)game.data).getGameTitle()), EdgeType.DIRECTED);
+                        GameEnum.getStringFromEnum(((Game) ((ZeldaTree.Node) parent).data).getGameTitle()),
+                        GameEnum.getStringFromEnum(((Game) game.data).getGameTitle()), EdgeType.DIRECTED);
             }
-            for(Object child : game.children) {
+            for (Object child : game.children) {
                 graph.addEdge(Math.random(),
-                        GameEnum.getStringFromEnum(((Game)game.data).getGameTitle()),
-                        GameEnum.getStringFromEnum(((Game)((ZeldaTree.Node)child).data).getGameTitle()),
+                        GameEnum.getStringFromEnum(((Game) game.data).getGameTitle()),
+                        GameEnum.getStringFromEnum(((Game) ((ZeldaTree.Node) child).data).getGameTitle()),
                         EdgeType.DIRECTED);
             }
         }
+        // Will be replacing this graphing library shortly with Treant.js calls
+        /*File file = new File("C:\\Users\\Kevin\\Desktop\\treant-js-master\\examples\\collapsable\\index.html");
+        try {
+            Desktop.getDesktop().browse(file.toURI());
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+        }*/
     }
 }
